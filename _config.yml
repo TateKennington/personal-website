@@ -1,0 +1,20 @@
+theme: panthera-jekyll
+plugins:
+  - jekyll-seo-tag
+title: "Tate Kennington"
+subtitle: ""
+description: ""
+menu:
+  - text: Home
+    link: /
+    icon:
+  - text: Portfolio
+    link: /portfolio
+    icon:
+  - text: Resume
+    link: /resume
+    icon:
+  - text: Blog
+    link: /blog
+    icon:
+     

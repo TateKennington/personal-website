@@ -1,0 +1,179 @@
+---
+---
+
+@import "panthera-jekyll";
+
+section{
+    margin-bottom: 20px;
+}
+
+/*
+ * Styles for the homepage posts section.
+*/
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.post-title{
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.post-tile a, .post-title a:link, .post-title a:visited{
+    color: black;
+}
+
+.post-meta{
+    display: flex;
+}
+
+.post-tags{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+}
+
+.post-tag{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 2px 5px;
+    border: 1px solid black;
+    background-color: rgb(200,200,200);
+    border-radius: 5px;
+}
+
+.post-date{
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.post-excerpt p{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+hr{
+    margin: 0px;
+    margin-right:10px
+}
+
+/*
+ * Styles for the homepage images section.
+*/
+.images{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-title{
+    display: block;
+    background-repeat: round;
+    font-size: 0px;
+    padding-top: 100px;
+    text-align: center;
+    width: 215px;
+    height: 215px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.image-title:hover{
+    display: block;
+    font-size: 20px;
+    background-color:rgb(50,50,50);
+    background-blend-mode: overlay;
+    color: white;
+}
+
+.image{
+    width: 215px;
+    height: 215px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+/*
+ * Styles for the homepage portfolio section.
+*/
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project{
+    padding: 0px 20px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    width: 450px;
+    flex-shrink: 0;
+    background-color: rgb(70,70,70);
+    background-blend-mode: overlay;
+    background-repeat: round;
+    filter: grayscale(100%);
+}
+
+.project:hover{
+    filter: grayscale(0%);
+}
+
+.project-title{
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: white;
+}
+
+.project-description{
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    display: block;
+    color: white;
+}
+
+.projects-full .project-description{
+    height: auto;
+    width: 50%;
+    color: black;
+}
+
+.projects-full .project-title{
+    color: black;
+}
+
+//.post-tile a, .post-title a:link, .post-title a:visited{
+//    color: black;
+//}
+
+.post_navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+ .post_navigation a{
+     display: block;
+ }
+
+ .post-body{
+     width: 50%;
+ }
+
+ .post-full{
+     margin-bottom: 40px;
+ }
