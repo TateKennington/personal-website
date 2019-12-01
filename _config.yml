@@ -4,6 +4,9 @@ plugins:
 title: "Tate Kennington"
 subtitle: ""
 description: ""
+collections:
+  projects:
+    output: true
 menu:
   - text: Home
     link: /
