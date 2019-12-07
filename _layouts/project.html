@@ -1,6 +1,33 @@
 ---
 layout: page
 ---
+<style>
+    .collapse, .collapsible{
+        width: 100%;
+        overflow-wrap: break-word;
+        background:rgb(241, 241, 241);
+        min-width: 500px;
+        max-width: 1000px;
+    }
+    .collapse{
+        text-align: left;
+        padding: 10px 10px;
+        margin-bottom: 0px;
+    }
+    .collapsible, .collapsible figure, .collapsible figure pre{
+        margin-top: 0px;
+        white-space: pre-wrap;       /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+
+    p{
+        max-width: 1000px;
+    }
+</style>
+<script src="/collapsible.js"></script>
 <div class='title'>
 <h1>{{ page.title }}</h1><a href="{{ page.repo }}"><p>View this project on Gitlab</p></a>
 </div>
