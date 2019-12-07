@@ -1,5 +1,3 @@
----
----
 <head>
 	<meta charset='utf-8' />
 	<meta name='viewport' content='width=device-width, user-scalable=no' />
@@ -133,7 +131,7 @@
 		<div id='status-notice' class='godot' style='display: none;'></div>
 	</div>
 
-	<script type='text/javascript' src='{{ include.resource-path }}Development.js'></script>
+	<script type='text/javascript' src='Development.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
 		var engine = new Engine;
@@ -142,7 +140,7 @@
 
 		(function() {
 
-			const MAIN_PACK = '{{ include.resource-path }}Development.pck';
+			const MAIN_PACK = 'Development.pck';
 			const INDETERMINATE_STATUS_STEP_MS = 100;
 
 			var canvas = document.getElementById('canvas');
