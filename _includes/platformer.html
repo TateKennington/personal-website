@@ -1,7 +1,4 @@
 <head>
-	<meta charset='utf-8' />
-	<meta name='viewport' content='width=device-width, user-scalable=no' />
-	<title></title>
 	<style type='text/css'>
 
 		body {
@@ -109,7 +106,6 @@
 			visibility: visible;
 		}
 	</style>
-
 </head>
 <body>
 	<canvas id='canvas'>
@@ -140,6 +136,7 @@
 
 		(function() {
 
+			const EXECUTABLE_NAME = 'Development';
 			const MAIN_PACK = 'Development.pck';
 			const INDETERMINATE_STATUS_STEP_MS = 100;
 
@@ -160,9 +157,9 @@
 			requestAnimationFrame(animate);
 
 			function adjustCanvasDimensions() {
-				var scale = window.devicePixelRatio || 1;
-				var width = window.innerWidth;
-				var height = window.innerHeight;
+				var scale = /*window.devicePixelRatio ||*/ 1;
+				var width = 800;//window.innerWidth;
+				var height = 600;//window.innerHeight;
 				canvas.width = width * scale;
 				canvas.height = height * scale;
 				canvas.style.width = width + "px";
@@ -252,7 +249,7 @@
 			} else {
 				setStatusMode('indeterminate');
 				engine.setCanvas(canvas);
-				engine.startGame(MAIN_PACK).then(() => {
+				engine.startGame(EXECUTABLE_NAME, MAIN_PACK).then(() => {
 					setStatusMode('hidden');
 					initializing = false;
 				}, displayFailureNotice);
@@ -260,4 +257,3 @@
 		})();
 	//]]></script>
 </body>
-
