@@ -1,0 +1,10 @@
+{%assign project = include.project%}
+<div class="project" style="background-image: url('{{project.thumbnail}}');">
+    <a href="{{project.url}}">
+        <p class="project-title">{{project.title}}</p>
+    </a>
+    <hr>
+    <div class="project-description">
+        {{project.description}}
+    </div>
+</div>
