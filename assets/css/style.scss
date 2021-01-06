@@ -11,8 +11,14 @@ body{
 .frame{
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px;
+    padding: 0px 10px;
     background-color: #EEE;
+}
+
+.c-hero{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
 }
 
 nav {
@@ -30,7 +36,7 @@ nav {
 }
 
 h1 {
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 section{
@@ -39,9 +45,8 @@ section{
 }
 
 .c-project{
+    margin-right: 30px;
     padding: 10px 20px;
-    margin-left: 20px;
-    margin-bottom: 15px;
     width: 300px;
     height: 280px;
     border-radius: 5px;
@@ -83,9 +88,7 @@ section{
     border: 1px solid black;
     border-radius: 5px;
     padding: 0px 20px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    width: 450px;
+    width: calc(100% - 70px);
     flex-shrink: 0;
 
     &__title{
@@ -149,6 +152,9 @@ hr{
 .projects{
     display: flex;
     flex-wrap: wrap;
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .projects-full .project-description{
