@@ -1,17 +1,20 @@
 {%assign project = include.project%}
-<div class="c-project">
-    <a href="{{project.url}}">
+<div class="c-project" style="background-image: url({{project.thumbnail}});">
+    <div class="c-project__blurb">
         <p class="c-project__title">{{project.title}}</p>
-    </a>
-    <hr>
-    <div class="c-project__description">
-        {{project.description}}
-    </div>
-    <div class="c-project__footer">
-        <img src="/assets/icons/play_arrow.svg" />
-        <div class="c-project__icons">
-            <img src="/assets/icons/play_arrow.svg" />
-            <img src="/assets/icons/play_arrow.svg" />
+        <div class="c-project__description">
+            {{project.description}}
+            <div class="c-project__tags">
+                <div class="c-tag">Comp</div>
+            </div>
+        </div>
+        <div class="c-project__footer">
+            <div class="c-project__icons">
+                <img src="/assets/icons/play_arrow.svg" />
+            </div>
+            <div class="c-project__tags">
+                <div class="c-tag">Comp</div>
+            </div>
         </div>
     </div>
 </div>

@@ -19,6 +19,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 10px 0px;
+    align-items: center;
 }
 
 nav {
@@ -27,6 +28,7 @@ nav {
     padding: 5px 10px;
 
     & a{
+        font-size: 18px;
         padding-right: 15px;
         padding-left: 15px;
         &:not(:last-child){
@@ -37,6 +39,11 @@ nav {
 
 h1 {
     margin: 10px 10px;
+    font-size: 30px;
+}
+
+h2{
+    font-size: 24px;
 }
 
 section{
@@ -44,43 +51,80 @@ section{
     margin-bottom: 20px;
 }
 
+.c-tag{
+    height: 30px;
+    border-radius: 10px;
+    background-color: #c4c4c4;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
 .c-project{
-    margin-right: 30px;
-    padding: 10px 20px;
     width: 300px;
-    height: 280px;
+    height: 300px;
+    margin-right: 32px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
     border-radius: 5px;
-    background-color: rgb(70,70,70);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    box-shadow: rgba(0,0,0,0.25) 0 4px 4px;
 
-    &__title{
-        font-size: 20px;
-        margin: 0px;
-        font-weight: 700;
-        color: white;
+    &:hover{
+        & .c-project__blurb{
+            flex-grow: 1;
+            border-radius: 5px;
+        }
+
+        & .c-project__description{
+            height: 200px;
+        }
     }
 
-    &__description{
-        flex-grow: 1;
-        display: block;
-        color: white;
-    }
-
-    &__footer {
+    &__footer{
+        margin: 8px 14px 8px 5px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        & img {
+        & img{
             width: 35px;
             height: 35px;
         }
     }
 
-    &__icons{
+    &__tags{
         display: flex;
         justify-content: flex-end;
+    }
+
+    &__description{
+        transition: height 1s;
+        height: 0;
+        margin: 0 14px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: 24px;
+        margin: 14px;
+        margin-bottom: 5px;
+    }
+
+    &__blurb{
+        transition: flex-grow 1s;
+
+        height: 96px;
+        background-color: #EEE;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }
 
@@ -153,7 +197,6 @@ hr{
     display: flex;
     flex-wrap: wrap;
     height: 300px;
-    overflow: hidden;
     width: 100%;
 }
 
