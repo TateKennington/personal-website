@@ -1,11 +1,39 @@
 <header>
     <div class="c-hero">
-        <h1>Tate<br />Kennington</h1>
+        <a href="/index.html">
+            <h1>Tate<br />Kennington</h1>
+        </a>
         <img src="https://placekitten.com/600/100" />
     </div>
     <nav>
-        <a>Home</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/blog.html">Blog</a>
+        {% if page.name != "index.html" %}
+        <a href="/index.html">
+            <p>Home</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Home</p>
+        </a>
+        {%endif%}
+        <div class="divider"></div>
+        {% if page.name != "projects.html" %}
+        <a href="/projects.html">
+            <p>Projects</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Projects</p>
+        </a>
+        {%endif%}
+        <div class="divider"></div>
+        {% if page.name != "blog.html" %}
+        <a href="/blog.html">
+            <p>Blog</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Blog</p>
+        </a>
+        {%endif%}
     </nav>
 </header>

@@ -5,16 +5,27 @@
         <div class="c-project__description">
             {{project.description}}
             <div class="c-project__tags">
-                <div class="c-tag">Comp</div>
+                {% for tag in project.tags offset:1 %}
+                {%include tag.html name=tag%}
+                {% endfor %}
             </div>
         </div>
         <div class="c-project__footer">
             <div class="c-project__icons">
-                <img src="/assets/icons/play_arrow.svg" />
+                {%if project.interactive%}
+                <a href="{{project.interactive}}"><img src="/assets/icons/play_arrow.svg" /></a>
+                {%endif%}
+                <a href="{{project.url}}"><img src="/assets/icons/subject.svg" /></a>
+                {%if project.repo%}
+                <a href="{{project.repo}}"><img src="/assets/icons/code.svg" /></a>
+                {%endif%}
             </div>
+            {%if project.tags.size > 0%}
             <div class="c-project__tags">
-                <div class="c-tag">Comp</div>
+                {%assign tag = project.tags[0]%}
+                {%include tag.html name=tag%}
             </div>
+            {%endif%}
         </div>
     </div>
 </div>
