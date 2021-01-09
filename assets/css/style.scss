@@ -55,6 +55,11 @@ nav {
             padding-left: 15px;
         }
 
+        &:not([href]){
+            border: 2px solid black;
+            height: calc(100% - 8px);
+        }
+
         &[href]:hover{
             background-color: #c3c3c3;
             text-decoration: none;
@@ -133,6 +138,10 @@ section{
         & img{
             width: 35px;
             height: 35px;
+
+            &:hover{
+                background-color: #c3c3c3;
+            }
         }
     }
 
@@ -198,6 +207,10 @@ section{
         width: 70px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+
+        &:hover{
+            background-color: #c3c3c3;
+        }
     }
 
     &__icon{
