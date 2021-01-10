@@ -6,6 +6,10 @@ body{
     margin: 10px auto;
     max-width: 860px;
     background-color: #DDD;
+
+    @media screen and (max-width: 426px) {
+        margin: 5px;
+    }
 }
 
 .frame{
@@ -20,6 +24,7 @@ body{
     justify-content: space-between;
     padding: 10px 0px;
     align-items: center;
+    overflow: hidden;
 
     & a{
         color: black;
@@ -30,7 +35,7 @@ body{
         }
     }
 
-    @media screen and (max-width: 420px){
+    @media screen and (max-width: 426px){
         & img{
             display: none;
         }
@@ -181,6 +186,10 @@ section{
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+
+    @media screen and (max-width: 426px){
+        margin-right: 0px;        
+    }
 }
 
 .c-post{
@@ -188,7 +197,8 @@ section{
     border-radius: 5px;
     padding-left: 20px;
     height: 70px;
-    width: calc(100% - 70px);
+    width: 100%;
+    max-width: 610px;
     box-shadow: rgba(0,0,0,0.25) 0 4px 4px;
     display: flex;
     justify-content: space-between;
@@ -202,6 +212,7 @@ section{
 
     &__date{
         margin: 0;
+        color: #666;
     }
 
     &__button{
@@ -223,6 +234,16 @@ section{
     &__icon{
         width: 30px;
         height: 30px;
+    }
+
+    @media screen and (max-width: 426px){
+        &__title{
+            font-size: 18px;
+        }
+
+        &__date{
+            font-size: 14px;
+        }
     }
 }
 
@@ -246,6 +267,10 @@ hr{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media screen and (max-width: 426px){
+        justify-content: center;
+    }
 }
 
 .projects-full .project-description{
