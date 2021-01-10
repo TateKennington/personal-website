@@ -6,6 +6,10 @@ body{
     margin: 10px auto;
     max-width: 860px;
     background-color: #DDD;
+
+    @media screen and (max-width: 768px){
+        margin: 5px;
+    }
 }
 
 .frame{
@@ -27,6 +31,12 @@ body{
 
         &:link{
             text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        & img{
+            display: none;
         }
     }
 }
@@ -108,6 +118,7 @@ section{
     width: 300px;
     height: 300px;
     margin-right: 32px;
+    margin-bottom: 10px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -174,6 +185,19 @@ section{
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+
+    @media screen and (max-width: 768px){
+        width: 600px;
+        height: 600px;
+
+        &__blurb{
+            flex-grow: 0 !important;
+        }
+
+        &__description{
+            display: none;
+        }
+    }
 }
 
 .c-post{
@@ -237,8 +261,11 @@ hr{
 .projects{
     display: flex;
     flex-wrap: wrap;
-    height: 300px;
     width: 100%;
+
+    @media screen and (max-width: 768px){
+        justify-content: center;
+    }
 }
 
 .projects-full .project-description{
