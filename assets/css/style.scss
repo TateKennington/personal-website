@@ -6,10 +6,6 @@ body{
     margin: 10px auto;
     max-width: 860px;
     background-color: #DDD;
-
-    @media screen and (max-width: 768px){
-        margin: 5px;
-    }
 }
 
 .frame{
@@ -34,7 +30,7 @@ body{
         }
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 420px){
         & img{
             display: none;
         }
@@ -185,19 +181,6 @@ section{
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
     }
-
-    @media screen and (max-width: 768px){
-        width: 600px;
-        height: 600px;
-
-        &__blurb{
-            flex-grow: 0 !important;
-        }
-
-        &__description{
-            display: none;
-        }
-    }
 }
 
 .c-post{
@@ -242,6 +225,7 @@ section{
         height: 30px;
     }
 }
+
 /*
  * Styles for the homepage posts section.
 */
@@ -262,10 +246,6 @@ hr{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
-    @media screen and (max-width: 768px){
-        justify-content: center;
-    }
 }
 
 .projects-full .project-description{
