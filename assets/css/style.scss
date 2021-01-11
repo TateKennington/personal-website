@@ -98,6 +98,10 @@ h2{
 section{
     margin-left: 25px;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 426px){
+        margin-left: 0px;
+    }
 }
 
 .c-tag{
@@ -116,8 +120,8 @@ section{
 }
 
 .c-project{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     margin-right: 32px;
     margin-bottom: 10px;
     background-size: cover;
@@ -130,22 +134,34 @@ section{
     justify-content: flex-end;
     box-shadow: rgba(0,0,0,0.25) 0 4px 4px;
 
+    @media screen and (max-width: 426px){
+        position: absolute;
+        top: 0px;
+    }
+
+    &__container{
+        width: 300px;
+        height: 300px;
+
+        @media screen and (max-width: 426px) {
+            position: relative;
+            width: calc(100% - 4px);
+            height: unset;
+            padding-top: 100%;
+        }
+    }
+
     &:hover{
         & .c-project__blurb{
             flex-grow: 1;
             border-radius: 5px;
         }
-
-        & .c-project__description{
-            height: 200px;
-        }
     }
 
     &__footer{
-        margin: 8px 14px 8px 5px;
+        margin: 0px 14px 0px 5px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         & img{
             width: 35px;
@@ -160,16 +176,13 @@ section{
     &__tags{
         display: flex;
         justify-content: flex-end;
+        overflow: hidden;
+        margin: 0px 14px 0px 5px;
     }
 
     &__description{
-        transition: height 1s;
-        height: 0;
         margin: 0 14px;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 
     &__title{
@@ -185,10 +198,23 @@ section{
         background-color: #EEE;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__hidden{
+        max-height: calc(100% - 96px);
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+        gap: 10px
     }
 
     @media screen and (max-width: 426px){
-        margin-right: 0px;        
+        margin-right: 0px;   
+        width: 100%;     
     }
 }
 
@@ -204,6 +230,10 @@ section{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 426px) {
+        padding-left: 10px;
+    }
 
     &__title{
         font-size: 24px;
@@ -267,6 +297,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 15px;
 
     @media screen and (max-width: 426px){
         justify-content: center;
