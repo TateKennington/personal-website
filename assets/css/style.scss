@@ -35,6 +35,12 @@ body{
         }
     }
 
+    & img{
+        height: 100px;
+        width: 600px;
+        object-fit: cover;
+    }
+
     @media screen and (max-width: 426px){
         & img{
             display: none;
