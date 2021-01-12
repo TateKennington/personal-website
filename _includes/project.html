@@ -1,5 +1,5 @@
 {%assign project = include.project%}
-<div class="c-project__container">
+<div class="c-project__container {% if include.hidden%} c-project__container--hidden {% endif %}">
     <div class="c-project" style="background-image: url({{project.thumbnail}});">
         <div class="c-project__blurb">
             <p class="c-project__title">{{project.title}}</p>

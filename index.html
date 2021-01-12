@@ -1,20 +1,58 @@
 ---
 layout: default
 ---
+<script>
+    const length = {{ site.projects.size }};
+    let pos = 0;
+
+    const updateCarousel = (dir) => {
+        pos += dir;
+        if (pos < 0 || pos + 2 > length) {
+            pos = Math.max(pos, 0);
+            pos = Math.min(pos, length - 2);
+            return;
+        }
+
+        if (dir > 0) {
+            document.querySelectorAll('.c-project__container')[pos - 1].classList.add('c-project__container--hidden')
+            document.querySelectorAll('.c-project__container')[pos + 1].classList.remove('c-project__container--hidden')
+        } else {
+            document.querySelectorAll('.c-project__container')[pos + 2].classList.add('c-project__container--hidden')
+            document.querySelectorAll('.c-project__container')[pos].classList.remove('c-project__container--hidden')
+        }
+
+        if (pos <= 0) {
+            document.querySelector('.projects__nav--left').classList.add('projects__nav--disabled')
+        } else {
+            document.querySelector('.projects__nav--left').classList.remove('projects__nav--disabled')
+        }
+        if (pos + 2 >= length) {
+            document.querySelector('.projects__nav--right').classList.add('projects__nav--disabled')
+        } else {
+            document.querySelector('.projects__nav--right').classList.remove('projects__nav--disabled')
+        }
+    }
+</script>
+
 <section>
     <h2>Projects</h2>
     <div class="projects">
-        <img class="projects__nav projects__nav--left" src="/assets/icons/arrow_left.svg" />
-        {% for project in site.projects %}
-        {%include project.html project=project%}
+        <img class="projects__nav projects__nav--left projects__nav--disabled" src="/assets/icons/arrow_left.svg"
+            onclick="updateCarousel(-1)" />
+        {% for project in site.projects limit: 2 %}
+        {%include project.html project=project hidden=false%}
         {% endfor %}
-        <img class="projects__nav" src="/assets/icons/arrow_right.svg" />
+        {% for project in site.projects offset: 2 limit: 5%}
+        {%include project.html project=project hidden=true%}
+        {% endfor %}
+        <img class="projects__nav projects__nav--right {% if site.projects.size <=2 %} projects__nav--disabled {% endif %}"
+            src="/assets/icons/arrow_right.svg" onclick="updateCarousel(1)" />
     </div>
 </section>
 <section>
     <h2>Blog</h2>
     <div class="posts">
-        {% for post in site.posts limit: 3%}
+        {% for post in site.posts limit: 5%}
         {%include blog-post.html post=post%}
         {% endfor %}
     </div>
