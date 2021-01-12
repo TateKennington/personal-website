@@ -4,9 +4,11 @@ layout: default
 <section>
     <h2>Projects</h2>
     <div class="projects">
+        <img class="projects__nav projects__nav--left" src="/assets/icons/arrow_left.svg" />
         {% for project in site.projects %}
         {%include project.html project=project%}
         {% endfor %}
+        <img class="projects__nav" src="/assets/icons/arrow_right.svg" />
     </div>
 </section>
 <section>
