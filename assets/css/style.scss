@@ -12,6 +12,12 @@ body{
     }
 }
 
+article{
+    margin: 0 auto;
+    margin-bottom: 15px;
+    max-width: 600px;
+}
+
 .frame{
     border: 1px solid black;
     border-radius: 5px;
@@ -101,6 +107,14 @@ h2{
     font-size: 24px;
     margin-bottom: 10px;
     margin-top: 25px;
+}
+
+h3{
+    margin-bottom: 5px;
+}
+
+p{
+    margin: 0;
 }
 
 section{
@@ -282,6 +296,10 @@ section{
         height: 30px;
     }
 
+    &__hidden{
+        display: none;
+    }
+
     @media screen and (max-width: 426px){
         &__title{
             font-size: 18px;
@@ -300,6 +318,24 @@ section{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    &__show-more{
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 35px;
+        box-shadow: rgba(0,0,0,0.25) 0 4px 4px;
+        font-size: 18px;
+        font-family: serif;
+
+        &:hover{
+            background-color: #c3c3c3;
+        }
+    }
+
+    &__full{
+        margin: 15px 0;
+    }
 }
 
 hr{
@@ -342,6 +378,12 @@ hr{
 
     @media screen and (max-width: 426px){
         justify-content: center;
+    }
+
+    &__full{
+        gap: 30px;
+        justify-content: center;
+        margin: 15px 0;
     }
 }
 

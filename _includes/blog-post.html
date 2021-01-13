@@ -1,5 +1,5 @@
 {%assign post = include.post%}
-<div class="c-post">
+<div class="c-post {%if include.hidden %} c-post__hidden {% endif %}">
     <div class="c-post__meta">
         <p class="c-post__title">{{post.title}}</p>
         <p class="c-post__date">{{post.date | date_to_string}}</p>

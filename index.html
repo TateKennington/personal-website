@@ -5,6 +5,17 @@ layout: default
     const length = {{ site.projects.size }};
     let pos = 0;
 
+    const showMore = () => {
+        const posts = document.querySelectorAll('.c-post__hidden');
+        for (let i = 0; i < 5; i++) {
+            if (i >= posts.length) {
+                document.querySelector('.posts__show-more').remove();
+                return;
+            }
+            posts[i].classList.remove('c-post__hidden');
+        }
+    }
+
     const updateCarousel = (dir) => {
         pos += dir;
         if (pos < 0 || pos + 2 > length) {
@@ -52,8 +63,13 @@ layout: default
 <section>
     <h2>Blog</h2>
     <div class="posts">
-        {% for post in site.posts limit: 5%}
-        {%include blog-post.html post=post%}
+        {% for post in site.posts limit: 2%}
+        {%include blog-post.html post=post hidden=false%}
         {% endfor %}
+        {% for post in site.posts offset: 2%}
+        {%include blog-post.html post=post hidden=true%}
+        {% endfor %}
+        {% if sites.posts.size > 2%}<button class="posts__show-more" onclick="showMore()"> Show More </button>{% endif
+        %}
     </div>
 </section>
