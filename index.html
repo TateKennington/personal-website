@@ -1,54 +1,76 @@
 ---
-    layout: page
+layout: default
+is_index: true
 ---
-<html>
-    <head>
-        <title>Test</title>
-    </head>
-    <body>
-        <section>
-            <h2>Portfolio Items</h2>
-            <div class="projects">
-                {% for project in site.projects %}
-                    <div class="project" style="background-image: url('{{project.thumbnail}}');">
-                    	<a href="{{project.url}}">
-                        <p class="project-title">{{project.title}}</p>
-                    	</a>
-                        <hr>
-                        <div class="project-description">
-                            {{project.description}}
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </section>
-        <section>
-            <h2>Latest Posts</h2>
-            <div class = "posts">
-            {% for post in site.posts limit: 3%}
-                <div class="post">
-                    <p class="post-title"><a href = "{{post.url}}">{{post.title}}</a></p>
-                    <div class="post-meta">
-                        <p class="post-date">{{post.date | date_to_string}}</p>
-                        <div class="post-tags">
-                        {% for tag in post.tags %}
-                        <p class="post-tag">{{tag}}</p>
-                        {% endfor %}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="post-excerpt">{{post.excerpt}}</div>
-                </div>
-            {% endfor %}
-            </div>
-        </section>
-        <section>
-            <h2>Latest Images</h2>
-            <div class="images">
-            {% for image in site.data.images %}
-                <p class="image-title" style="background-image: url('{{image.url}}');">{{ image.title }}</p>
-            {% endfor %}
-            </div>
-        </section>
-    </body>
-</html>
+<script>
+    const length = {{ site.projects.size }};
+    let pos = 0;
+
+    const showMore = () => {
+        const posts = document.querySelectorAll('.c-post__hidden');
+        for (let i = 0; i < 5; i++) {
+            if (i >= posts.length) {
+                document.querySelector('.posts__show-more').remove();
+                return;
+            }
+            posts[i].classList.remove('c-post__hidden');
+        }
+    }
+
+    const updateCarousel = (dir) => {
+        pos += dir;
+        if (pos < 0 || pos + 2 > length) {
+            pos = Math.max(pos, 0);
+            pos = Math.min(pos, length - 2);
+            return;
+        }
+
+        if (dir > 0) {
+            document.querySelectorAll('.c-project__container')[pos - 1].classList.add('c-project__container--hidden')
+            document.querySelectorAll('.c-project__container')[pos + 1].classList.remove('c-project__container--hidden')
+        } else {
+            document.querySelectorAll('.c-project__container')[pos + 2].classList.add('c-project__container--hidden')
+            document.querySelectorAll('.c-project__container')[pos].classList.remove('c-project__container--hidden')
+        }
+
+        if (pos <= 0) {
+            document.querySelector('.projects__nav--left').classList.add('projects__nav--disabled')
+        } else {
+            document.querySelector('.projects__nav--left').classList.remove('projects__nav--disabled')
+        }
+        if (pos + 2 >= length) {
+            document.querySelector('.projects__nav--right').classList.add('projects__nav--disabled')
+        } else {
+            document.querySelector('.projects__nav--right').classList.remove('projects__nav--disabled')
+        }
+    }
+</script>
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects">
+        <img class="projects__nav projects__nav--left projects__nav--disabled" src="/assets/icons/arrow_left.svg"
+            onclick="updateCarousel(-1)" />
+        {% for project in site.projects limit: 2 %}
+        {%include project.html project=project hidden=false%}
+        {% endfor %}
+        {% for project in site.projects offset: 2 limit: 5%}
+        {%include project.html project=project hidden=true%}
+        {% endfor %}
+        <img class="projects__nav projects__nav--right {% if site.projects.size <=2 %} projects__nav--disabled {% endif %}"
+            src="/assets/icons/arrow_right.svg" onclick="updateCarousel(1)" />
+    </div>
+</section>
+<section>
+    <h2>Blog</h2>
+    <div class="posts">
+        {% for post in site.posts limit: 2%}
+        {%include blog-post.html post=post hidden=false%}
+        {% endfor %}
+        {% for post in site.posts offset: 2%}
+        {%include blog-post.html post=post hidden=true%}
+        {% endfor %}
+        {% if sites.posts.size > 2%}<button class="posts__show-more" onclick="showMore()"> Show More </button>{% endif
+        %}
+    </div>
+</section>

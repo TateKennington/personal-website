@@ -1,0 +1,39 @@
+<header>
+    <div class="c-hero">
+        <a href="/index.html">
+            <h1>Tate<br />Kennington</h1>
+        </a>
+        <img src="/assets/hero.jpg" />
+    </div>
+    <nav>
+        {% unless page.is_index %}
+        <a href="/index.html">
+            <p>Home</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Home</p>
+        </a>
+        {%endunless%}
+        <div class="divider"></div>
+        {% unless page.is_projects %}
+        <a href="/projects.html">
+            <p>Projects</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Projects</p>
+        </a>
+        {%endunless%}
+        <div class="divider"></div>
+        {% unless page.is_blog %}
+        <a href="/blog.html">
+            <p>Blog</p>
+        </a>
+        {%else%}
+        <a>
+            <p>Blog</p>
+        </a>
+        {%endunless%}
+    </nav>
+</header>

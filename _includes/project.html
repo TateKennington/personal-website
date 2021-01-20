@@ -1,0 +1,31 @@
+{%assign project = include.project%}
+<div class="c-project__container {% if include.hidden%} c-project__container--hidden {% endif %}">
+    <div class="c-project" style="background-image: url({{project.thumbnail}});">
+        <div class="c-project__blurb">
+            <p class="c-project__title">{{project.title}}</p>
+            <div class="c-project__hidden">
+                <p class="c-project__description">{{project.description}}</p>
+                <div class="c-project__tags">
+                    {% for tag in project.tags offset:1 %}
+                    {%include tag.html name=tag%}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="c-project__footer">
+                <div class="c-project__icons">
+                    {%if project.interactive%}
+                    <a href="{{project.interactive}}"><img src="/assets/icons/play_arrow.svg" /></a>
+                    {%endif%}
+                    <a href="{{project.url}}"><img src="/assets/icons/subject.svg" /></a>
+                    {%if project.repo%}
+                    <a href="{{project.repo}}"><img src="/assets/icons/code.svg" /></a>
+                    {%endif%}
+                </div>
+                {%if project.tags.size > 0%}
+                {%assign tag = project.tags[0]%}
+                {%include tag.html name=tag%}
+                {%endif%}
+            </div>
+        </div>
+    </div>
+</div>

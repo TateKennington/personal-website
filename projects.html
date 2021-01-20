@@ -1,0 +1,9 @@
+---
+layout: default
+is_projects: true
+---
+<div class="projects projects__full">
+    {% for project in site.projects %}
+    {%include project.html project=project hidden=false%}
+    {% endfor %}
+</div>
