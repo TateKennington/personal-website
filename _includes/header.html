@@ -6,7 +6,7 @@
         <img src="/assets/hero.jpg" />
     </div>
     <nav>
-        {% if page.name != "index.html" %}
+        {% unless page.is_index %}
         <a href="/index.html">
             <p>Home</p>
         </a>
@@ -14,9 +14,9 @@
         <a>
             <p>Home</p>
         </a>
-        {%endif%}
+        {%endunless%}
         <div class="divider"></div>
-        {% if page.name != "projects.html" %}
+        {% unless page.is_projects %}
         <a href="/projects.html">
             <p>Projects</p>
         </a>
@@ -24,9 +24,9 @@
         <a>
             <p>Projects</p>
         </a>
-        {%endif%}
+        {%endunless%}
         <div class="divider"></div>
-        {% if page.name != "blog.html" %}
+        {% unless page.is_blog %}
         <a href="/blog.html">
             <p>Blog</p>
         </a>
@@ -34,6 +34,6 @@
         <a>
             <p>Blog</p>
         </a>
-        {%endif%}
+        {%endunless%}
     </nav>
 </header>
