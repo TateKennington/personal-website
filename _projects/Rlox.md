@@ -5,4 +5,5 @@ description: An interpreter for the Lox learning language from Crafting Interpre
 thumbnail: /projects/thumbnails/rlox.jpg
 repo: https://github.com/TateKennington/Rlox
 tags: Rust Theory
+interactive: /projects/demos/rlox/index.html
 ---
