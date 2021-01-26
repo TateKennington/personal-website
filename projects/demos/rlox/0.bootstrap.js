@@ -43,7 +43,7 @@ eval("\"use strict\";\n// Instantiate WebAssembly module\nvar wasmExports = __we
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var rlox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rlox */ \"../pkg/rlox.js\");\n\r\n\r\ndocument.getElementById(\"text-field\").onchange = () => {\r\n    document.getElementById(\"run\").click();\r\n}\r\n\r\ndocument.getElementById(\"run\").onclick = (e) => {\r\n    const result = document.createElement('p');\r\n    const source = document.getElementById(\"text-field\").value;\r\n    if (source.length === 0) {\r\n        return;\r\n    }\r\n    result.innerHTML = rlox__WEBPACK_IMPORTED_MODULE_0__[\"run\"](source);\r\n    document.getElementById(\"text-field\").value = '';\r\n    document.getElementById(\"results\").appendChild(result);\r\n}\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var rlox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rlox */ \"../pkg/rlox.js\");\n\r\n\r\ndocument.getElementById(\"text-field\").onchange = () => {\r\n    document.getElementById(\"run\").click();\r\n}\r\n\r\ndocument.getElementById(\"run\").onclick = (e) => {\r\n    const result = document.createElement('p');\r\n    const source = document.getElementById(\"text-field\").value;\r\n    if (source.length === 0) {\r\n        return;\r\n    }\r\n    result.innerHTML = rlox__WEBPACK_IMPORTED_MODULE_0__[\"run\"](source);\r\n    document.getElementById(\"results\").appendChild(result);\r\n}\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
