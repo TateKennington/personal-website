@@ -184,7 +184,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + { "../pkg/rlox_bg.wasm": "24bdfe05a5d0357e407b" }[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + { "../pkg/rlox_bg.wasm": "860a0fd795052a37e5f1" }[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 					var bytesPromise = req.then(function (x) { return x.arrayBuffer(); });
 /******/ 					promise = bytesPromise.then(function (bytes) {
