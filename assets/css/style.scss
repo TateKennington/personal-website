@@ -141,6 +141,12 @@ section{
         background-color: rgba(0, 0, 255, 0.2);
         color: rgb(30, 63, 151);
     }
+
+    &--rust{
+        border: 2px solid rgb(151, 63, 30);
+        background-color: rgba(255, 0, 0, 0.2);
+        color: rgb(151, 63, 30);
+    }
 }
 
 .c-project{

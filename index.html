@@ -51,10 +51,11 @@ is_index: true
     <div class="projects">
         <img class="projects__nav projects__nav--left projects__nav--disabled" src="/assets/icons/arrow_left.svg"
             onclick="updateCarousel(-1)" />
-        {% for project in site.projects limit: 2 %}
+        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+        {% for project in sorted_projects limit: 2 %}
         {%include project.html project=project hidden=false%}
         {% endfor %}
-        {% for project in site.projects offset: 2 limit: 5%}
+        {% for project in sorted_projects offset: 2 limit: 5%}
         {%include project.html project=project hidden=true%}
         {% endfor %}
         <img class="projects__nav projects__nav--right {% if site.projects.size <=2 %} projects__nav--disabled {% endif %}"
