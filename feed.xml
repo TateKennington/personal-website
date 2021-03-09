@@ -1,0 +1,25 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tate's Blog</title>
+    <description>My random thoughts on beep boop and my beep boop projects</description>
+    <link>{{ site.url }}</link>
+    {% for project in site.projects %}
+      {% unless project.draft %}
+        <item>
+          <title>{{ project.title | xml_escape }}</title>
+          <description>{{ project.description | xml_escape }}</description>
+          <content type="html" xml:base="{{ project.url | prepend: site.url }}">{{ project.description | xml_escape }}</content>
+          <pubDate>{{ project.date | date_to_xmlschema }}</pubDate>
+          <link>{{ project.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ project.url | prepend: site.url }}</guid>
+          <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ project.thumbnail | prepend: site.url }}"/>
+          <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ project.thumbnail | prepend: site.url }}"/>
+        </item>
+      {% endunless %}
+    {% endfor %}
+  </channel>
+</rss>
