@@ -444,11 +444,19 @@ hr{
     column-gap: 35px;
     row-gap: 4px;
     margin: 0 15px;
+
+    @media screen and (max-width: 426px){
+        display: block;
+    }
 }
 
 .c-technology{
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 426px){
+        margin-bottom: 5px;
+    }
 
     &__indicators{
         display: flex;
@@ -469,7 +477,11 @@ hr{
         }
 
         &--grey{
-            background-color: grey;
+            background-color: #CCC;
+        }
+
+        @media screen and (max-width: 426px){
+            height: 15px;
         }
     }
 
@@ -517,6 +529,8 @@ hr{
         display: flex;
         gap: 7px;
         margin-top: 5px;
+        width: 100%;
+        flex-wrap: wrap;
 
         & p:first-of-type{
             font-weight: bold;
@@ -563,6 +577,10 @@ hr{
     row-gap: 4px;
     margin: 0 15px;
     margin-top: 20px;
+
+    @media screen and (max-width: 426px){
+        display: block;
+    }
 }
 
 .c-link{

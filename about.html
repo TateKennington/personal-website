@@ -149,11 +149,11 @@ technologies:
       <div class="c-technology" style="grid-row:{{row}};grid-column:{{col}};">
         <p>{{technology.name}}</p>
         <div class="c-technology__indicators">
-        {% for i in (technology.proficiency..4) %}
-          <div class="c-technology__indicator c-technology__indicator--grey"></div>
-        {% endfor %}
         {% for i in (1..technology.proficiency) %}
           <div class="c-technology__indicator c-technology__indicator--green"></div>
+        {% endfor %}
+        {% for i in (technology.proficiency..4) %}
+          <div class="c-technology__indicator c-technology__indicator--grey"></div>
         {% endfor %}
         </div>
       </div>
