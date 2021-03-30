@@ -1,0 +1,204 @@
+---
+layout: default
+title: Resume
+links:
+  - icon: /assets/icons/email.png
+    link: mailto:tatekennington@gmail.com
+    content: tatekennington@gmail.com
+  - icon: /assets/icons/github.png
+    link: https://github.com/TateKennington
+    content: github.com/TateKennington
+  - icon: /assets/icons/linkedin.png
+    link: https://www.linkedin.com/in/tate-kennington/
+    content: linkedin.com/in/tate-kennington/
+  - icon: /assets/icons/itch.svg
+    link: https://punctualpangolin.itch.io
+    content: punctualpangolin.itch.io
+experience:
+    - title: Intermediate Developer
+      company: CloudCannon
+      start: 2019-11-01T10:20:00Z
+      thumbnail: /assets/thumbnails/cloudcannon-thumb.jfif
+      description: |
+        Developed web applications using Javascript/Typescript frameworks and static sites using
+        Jamstack technologies, primarily Jekyll. Also contributed to administrating the internal office network.
+      technologies:
+        - Javascript
+        - Typescript
+        - React
+        - Jekyll
+        - HTML
+        - CSS
+        - Git
+    - title: Summer Research Student
+      company: The Australian National University
+      start: 2018-11-01T10:20:00Z
+      end: 2019-01-01T10:20:00Z
+      thumbnail: /assets/thumbnails/anu-thumb.jfif
+      description: |
+        Developed and investigated a novel parallel SAT-solving algorithm for applications in security.
+      technologies:
+        - C 
+        - C++
+        - OpenMP
+        - Docker
+    - title: Project Student
+      company: New Zealand's Aluminium Smelters
+      start: 2017-12-01T10:20:00Z
+      end: 2018-02-01T10:20:00Z
+      thumbnail: /assets/thumbnails/nzas-thumb.png
+      description: |
+        Rewrote a set of existing programs for loading data into a set of databases
+        to conform better with modern standards and be more easily
+        maintainable.
+      technologies:
+        - C#
+        - SSIS
+        - SQL Server
+    - title: Project Student
+      company: New Zealand's Aluminium Smelters
+      start: 2016-12-01T10:20:00Z
+      end: 2017-02-01T10:20:00Z
+      thumbnail: /assets/thumbnails/nzas-thumb.png
+      description: |
+        Built a Web application and a set of programs which are accessed through
+        CGI and can be used to remotely monitor and manage production
+        computers.
+      technologies:
+        - C 
+        - Oracle RDB
+        - HTML
+        - CSS
+        - Javascript
+        - Linux
+qualifications:
+    - name: Bachelor of Science (Honours)
+      subject: Computer Science, First Class
+      start: 2019-01-01T10:20:00Z
+      end: 2019-12-01T10:20:00Z
+      institution: University of Otago
+      thumbnail: /assets/thumbnails/otago-thumb.png
+    - name: Bachelor of Science
+      subject: Mathematics and Computer Science
+      start: 2016-01-01T10:20:00Z
+      end: 2019-12-01T10:20:00Z
+      institution: University of Otago
+      thumbnail: /assets/thumbnails/otago-thumb.png
+technologies:
+    - name: Javascript
+      proficiency: 4
+    - name: Typescript
+      proficiency: 4
+    - name: React
+      proficiency: 4
+    - name: Godot
+      proficiency: 3
+    - name: Rust
+      proficiency: 2
+    - name: Go
+      proficiency: 2
+    - name: Linux
+      proficiency: 4
+    - name: Networking
+      proficiency: 4
+    - name: OpenGL
+      proficiency: 2
+    - name: GLSL
+      proficiency: 2
+    - name: SQL
+      proficiency: 2
+    - name: Git
+      proficiency: 3
+---
+<div>
+    <div class="print-border"></div>
+    <section class="print-section">
+    <h2>Contacts</h2>
+    <div class='c-links'>
+    {% for link in page.links %}
+      <div class='c-link'>
+        <img class="c-link__icon" src="{{link.icon}}"/>
+        <a class="c-link__link" href={{link.link}}>{% if link.content %}{{link.content}}{% else %}{{link.link}}{% endif %}</a>
+      </div>
+    {% endfor %}
+    </div>
+    </section>
+    <section class="print-section">
+    <h2>Profile</h2>
+    <p class='c-profile'>
+      I am a Dunedin based software developer with a passion for games. In my spare time I like 
+      to participate in informatics competitions, such as Google's CodeJam or the Advent of Code, and
+      game jams, both locally and online via itch.io. <br/><br/>I thrive when I'm working on hard problems and have
+      a proven record of being able to deliver under
+      pressure. <br/><br/>My friends and colleagues have said that I have excellent communication skills and am
+      able to deliver clear and simple explanations of complex topics. To keep my communication skills in practice
+      I like to make occasional blog posts and project post-mortems on my website. <br/><br/>I am a self motivated and intuitive
+      problem solver, when met with a challenge I am able to independently investigate and experiment, and ultimately
+      come to a good solution to the problem. My bosses often joke that their management strategy for me is to give me
+      a hard task and then leave for a bit, when they come back the task is done.
+    </p>
+    </section>
+    <section class="print-section">
+    <h2>Technical Skills</h2>
+    <div class="c-technologies">
+    {% assign sorted_technologies = page.technologies | sort: "name" | reverse | sort: "proficiency" | reverse%}
+    {% for technology in sorted_technologies %}
+      {% assign half = forloop.length | divided_by: 2%}
+      {% assign row = forloop.index0 | modulo: half | plus: 1%}
+      {% assign col = forloop.index0 | divided_by: half | plus: 1%}
+      <div class="c-technology" style="grid-row:{{row}};grid-column:{{col}};">
+        <p>{{technology.name}}</p>
+        <div class="c-technology__indicators">
+        {% for i in (technology.proficiency..4) %}
+          <div class="c-technology__indicator c-technology__indicator--grey"></div>
+        {% endfor %}
+        {% for i in (1..technology.proficiency) %}
+          <div class="c-technology__indicator c-technology__indicator--green"></div>
+        {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    </section>
+    <h2>Work Experience</h2>
+    <div class="c-experiences">
+    {% assign sorted_experience = page.experience | sort: "start" | reverse %}
+    {% for job in sorted_experience %}
+      <div class="c-experience">
+        <img class="c-experience__thumb" src="{{job.thumbnail}}"/>
+        <div>
+          <div class="c-experience__header">
+            <h3>{{job.title}} <span style="font-weight: normal;">at {{job.company}}</span></h3>
+            <p class="c-experience__date">{{job.start | date: "%b %Y"}} - {% if job.end %}{{job.end | date: "%b %Y"}}{% else %} Present {% endif %}</p>
+          </div>
+          <p>{{job.description}}</p>
+          {% if job.technologies%}
+          <div class='c-experience__technologies'>
+            <p>Technologies:</p>
+            {% assign sorted_technologies = job.technologies | sort %}
+            {% for technology in sorted_technologies %}
+            <p>{{technology}}{% unless forloop.last%},{% endunless %}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+    <h2>Education</h2>
+    <div class="c-qualifications">
+    {% assign sorted_qualifications = page.qualifications | sort: "start" | reverse %}
+    {% for qualification in sorted_qualifications %}
+      <div class="c-qualification">
+        <img class="c-qualification__thumb" src="{{qualification.thumbnail}}"/>
+        <div>
+          <h3>{{qualification.name}} <span style="font-weight: normal;">in {{qualification.subject}}</span></h3>
+          <div class="c-qualification__subheading">
+            <p>{{qualification.institution}},</p>
+            <p>{{qualification.start | date: "%b %Y"}} - {% if qualification.end %}{{qualification.end | date: "%b %Y"}}{% else %} Present {% endif %}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
