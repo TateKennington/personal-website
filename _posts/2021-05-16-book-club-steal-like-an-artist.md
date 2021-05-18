@@ -1,6 +1,8 @@
 ---
 layout: project
 title: "Book Club: Steal Like An Artist"
+description: The inaugural tatekennington.com book club on Austin Kleon's "Steal Like An Artist"
+thumbnail: /assets/thumbnails/3d-Steal-Like-an-Artist-NYT.jpg
 ---
 At long last, the book club series of blog posts has arrived! In this series of posts, I'll be summarising some of the books I've been reading lately and discussing what I think the key takeaways are. As an avid beep booper I'll mostly be relating my analysis back to being a software developer, both professionally and as a hobbyist making games, your mileage may vary.
 <br/><br/>

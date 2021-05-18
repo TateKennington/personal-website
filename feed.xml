@@ -21,5 +21,19 @@ layout: none
         </item>
       {% endunless %}
     {% endfor %}
+    {% for post in site.posts %}
+      {% unless post.draft %}
+        <item>
+          <title>{{ post.title | xml_escape }}</title>
+          <description>{{ post.description | xml_escape }}</description>
+          <content type="html" xml:base="{{ post.url | prepend: site.url }}">{{ post.description | xml_escape }}</content>
+          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+          <link>{{ post.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+          <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post.thumbnail | prepend: site.url }}"/>
+          <media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" url="{{ post.thumbnail | prepend: site.url }}"/>
+        </item>
+      {% endunless %}
+    {% endfor %}
   </channel>
 </rss>
