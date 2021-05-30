@@ -4,7 +4,8 @@ is_projects: true
 title: Projects
 ---
 <div class="projects projects__full">
-    {% for project in site.projects %}
+    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    {% for project in sorted_projects %}
     {%include project.html project=project hidden=false%}
     {% endfor %}
 </div>
