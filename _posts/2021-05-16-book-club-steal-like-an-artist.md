@@ -4,40 +4,39 @@ title: "Book Club: Steal Like An Artist"
 description: The inaugural tatekennington.com book club on Austin Kleon's "Steal Like An Artist"
 thumbnail: /assets/thumbnails/3d-Steal-Like-an-Artist-NYT.jpg
 ---
-At long last, the book club series of blog posts has arrived! In this series of posts, I'll be summarising some of the books I've been reading lately and discussing what I think the key takeaways are. As an avid beep booper I'll mostly be relating my analysis back to being a software developer, both professionally and as a hobbyist making games, your mileage may vary.
-<br/><br/>
-First in line for this prestigious position is <a href="https://austinkleon.com/steal/">Austin Kleon's "Steal Like An Artist"</a>. I've been on a bit of a self-help book kick lately and Kleon's books are easily amongst some of my favourites. Many books in this genre make the mistake of taking content that would fit comfortably into a handful of blog posts, oftentimes because they are starting from a handful of blog posts, and stretching them out into a feature-length novel. Kleon manages to avoid this trap by making his books concise with big font, small pages, and plenty of illustrations. This makes them fun reading that never becomes too drawn out, which makes sense seeing as in his own words, "creativity is subtraction".
-<br/><br/>
+At long last, the book club series of blog posts has arrived! In this series of posts, I'll be summarising some of the books I've been reading lately and discussing what I think the key takeaways are. As an avid beep booper I'll mostly be relating my analysis back to being a software developer, both professionally and as a hobbyist making games, your mileage may vary.  
+
+First in line for this prestigious position is [Austin Kleon's "Steal Like An Artist"](https://austinkleon.com/steal/). I've been on a bit of a self-help book kick lately and Kleon's books are easily amongst some of my favourites. Many books in this genre make the mistake of taking content that would fit comfortably into a handful of blog posts, oftentimes because they are starting from a handful of blog posts, and stretching them out into a feature-length novel. Kleon manages to avoid this trap by making his books concise with big font, small pages, and plenty of illustrations. This makes them fun reading that never becomes too drawn out, which makes sense seeing as in his own words, "creativity is subtraction".  
+
 The book is divided into ten chapters each one discussing one of the sub-titular ten things nobody told you about being creative. Bringing a bit of subtraction of my own, by way of gross oversimplification, I'm going to boil it down into three key ideas.
 
-<h3>Steal Shamelessly</h3>
-As you can probably guess this is a book about stealing, at a low level it's about how you can make your larceny more effective and efficient, and at a high level it's about the big picture of why you should steal and how to best make use of your ill-gotten goods. Before any misunderstandings get out of hand, stealing here refers to breaking down other peoples’ work and taking inspiration from it for yourself. I think Kleon calls it stealing not just because it has dramatic effect but to challenge this immediate negative reaction you probably have to stealing. Often originality is thought to be everything, and we have to squirrel away all our inspirations and sources away, lest someone detect them and decry us as unoriginal. Instead, we should wear our inspirations proudly, steal shamelessly, remembering that what is more important is to do justice to our forebears. I've often thought to myself that there are two kinds of great art out there, that which is totally new and original and unlike anything, and that which is the perfect example of its genre but executed to the highest degree of excellence. 
-<br/><br/>
-For how to achieve this Kleon offers a very straightforward set of rules. When you see something first decide if it's worth stealing, if it is steal it, then move on to the next thing. Keep a list of all the things you decide to steal or anything that inspires you or otherwise brings you joy. Personally, I often hear something or say something in a flash of genius and think "That'd make a great band name," or "what a funky concept for a game," throw those in there too. Maybe write a little sentence saying what about it speaks to you, or include a picture if it fits. Give yourself as much material as you can for when you're building something and need to take advantage of some stolen goods.
-<br/><br/>
+### Steal Shamelessly
+As you can probably guess this is a book about stealing, at a low level it's about how you can make your larceny more effective and efficient, and at a high level it's about the big picture of why you should steal and how to best make use of your ill-gotten goods. Before any misunderstandings get out of hand, stealing here refers to breaking down other peoples’ work and taking inspiration from it for yourself. I think Kleon calls it stealing not just because it has dramatic effect but to challenge this immediate negative reaction you probably have to stealing. Often originality is thought to be everything, and we have to squirrel away all our inspirations and sources away, lest someone detect them and decry us as unoriginal. Instead, we should wear our inspirations proudly, steal shamelessly, remembering that what is more important is to do justice to our forebears. I've often thought to myself that there are two kinds of great art out there, that which is totally new and original and unlike anything, and that which is the perfect example of its genre but executed to the highest degree of excellence.  
+
+For how to achieve this Kleon offers a very straightforward set of rules. When you see something first decide if it's worth stealing, if it is steal it, then move on to the next thing. Keep a list of all the things you decide to steal or anything that inspires you or otherwise brings you joy. Personally, I often hear something or say something in a flash of genius and think "That'd make a great band name," or "what a funky concept for a game," throw those in there too. Maybe write a little sentence saying what about it speaks to you, or include a picture if it fits. Give yourself as much material as you can for when you're building something and need to take advantage of some stolen goods.  
+
 To ground this in some personal examples, my larceny list(working title) is mostly screenshots of different website and game UIs, with a sentence caption describing what I like about them. I find design is often one of my weaknesses and so the hope is to build a reference library of designs I like. Then whenever my brain grinds to a halt trying to make a design on my own I'll be able to pluck UI parts from them. Other things I'd like to start including are gameplay and story elements that I find particularly interesting and impressive technical achievements from programs that I like. And of course, in a separate list I keep all the little phrases and fragments of ideas that I get a kick out of, with such classics as "tax frog" and "pigman seeks the trough".
-<h3>"Go deeper than anybody else"</h3>
-<blockquote>
-Don't just steal the style, steal the thinking behind the style. You don't want to look like your heroes, you want to see like your heroes. -- Austin Kleon.
-</blockquote>
-I think this idea is one of the most personally compelling, I'm a person who wants to know exactly how everything works and have a hard time being able to stop and letting the rest of the details just be magic. As you can probably imagine this is both a blessing and a curse. So I thought I would try taking Kleon's idea of a geneology of artist and try applying it to a number of things that I want to go deep on. My plan is to note down some number of "parent topics" whenever I'm studying something, in addition to the things I might want to steal from it, and then work my way through studying those things. For example, when I'm learning a new technology they could be the technologies it was built, or the algorithms that it uses. This way I can keep a structured approach and not get lost or overwhelmed so much trying to work out what to do next.
-<br/><br/>
-In the world of software, we can take some very concrete direction from this idea. All software is built on a tower of abstractions, new technologies are just sitting on top of this tower differently and hide all the nitty-gritty details beneath it. These abstractions make the day-to-day quality of life for a software developer much higher, we can achieve incredibly intricate things without having to worry about all the small mechanical details. If you're brave enough to dig deeper, however, you can gain some great advantages from this arcane knowledge. It may only come up 1% of the time, but when it does you're a hero, and when it doesn't you've still learned something new and become a better developer for it.
-<br/><br/>
+
+### "Go deeper than anybody else"
+>Don't just steal the style, steal the thinking behind the style. You don't want to look like your heroes, you want to see like your heroes. -- Austin Kleon.  
+
+I think this idea is one of the most personally compelling, I'm a person who wants to know exactly how everything works and have a hard time being able to stop and letting the rest of the details just be magic. As you can probably imagine this is both a blessing and a curse. So I thought I would try taking Kleon's idea of a geneology of artist and try applying it to a number of things that I want to go deep on. My plan is to note down some number of "parent topics" whenever I'm studying something, in addition to the things I might want to steal from it, and then work my way through studying those things. For example, when I'm learning a new technology they could be the technologies it was built, or the algorithms that it uses. This way I can keep a structured approach and not get lost or overwhelmed so much trying to work out what to do next.  
+
+In the world of software, we can take some very concrete direction from this idea. All software is built on a tower of abstractions, new technologies are just sitting on top of this tower differently and hide all the nitty-gritty details beneath it. These abstractions make the day-to-day quality of life for a software developer much higher, we can achieve incredibly intricate things without having to worry about all the small mechanical details. If you're brave enough to dig deeper, however, you can gain some great advantages from this arcane knowledge. It may only come up 1% of the time, but when it does you're a hero, and when it doesn't you've still learned something new and become a better developer for it.  
+
 I think this idea is one of the most personally compelling, I'm a person who wants to know exactly how everything works and have a hard time being able to stop and letting the rest of the details just be magic. As you can probably imagine this is both a blessing and a curse. So I thought I would try taking Kleon's idea of a genealogy of artists and try applying it to other things that I want to go deep on. My plan is to note down some number of "parent topics" whenever I'm studying something, in addition to the things I might want to steal from it, and then work my way through studying those things. For example, when I'm learning a new technology they could be the technologies it was built or the algorithms that it uses. This way I can keep a structured approach and not get lost or overwhelmed so much trying to work out what to do next.
-<h3>"The hard thing is taking the obvious advice"</h3>
-<blockquote cite="https://www.smbc-comics.com/comic/best-life-advice">
-All good advice is obvious. Work hard, make things, find love, brush your teeth et cetera. The hard thing is <i>taking</i> the obvious advice. -- <a href="https://www.smbc-comics.com/comic/best-life-advice">SMBC: The best life advice.</a>
-</blockquote >
+
+### "The hard thing is taking the obvious advice"
+>All good advice is obvious. Work hard, make things, find love, brush your teeth et cetera. The hard thing is <i>taking</i> the obvious advice. -- [SMBC: The best life advice.](https://www.smbc-comics.com/comic/best-life-advice)  
+
 The final thing that Kleon offers in this book is some good life advice, it's nothing too surprising or revolutionary but bears repeating, which is pretty apropos considering the books general theme. Because this advice shouldn't be new to anyone I'm only going to render it in the roughest detail, the challenge to you the reader is actually following it.
-<ul>
-    <li>Start making things early and fake it until you make it.</li>
-    <li>Make sure you keep hobbies outside of your creative work</li>
-    <li><a href="https://austinkleon.com/show-your-work/">Share your work with others</a></li>
-    <li>Be nice to other people, walk away from fights (especially on the internet)</li>
-    <li>Surround yourself with good people</li>
-    <li>Being a starving artist is no fun, get a good job and look after yourself</li>
-    <li>Embrace being bored</li>
-</ul>
-<br/>
+
+- Start making things early and fake it until you make it.
+- Make sure you keep hobbies outside of your creative work
+- [Share your work with others](https://austinkleon.com/show-your-work/)
+- Be nice to other people, walk away from fights (especially on the internet)
+- Surround yourself with good people
+- Being a starving artist is no fun, get a good job and look after yourself
+- Embrace being bored
+
 Thus concludes the inaugural tatekennington.com book club. Please let me know what you think dear readers who happen to have a means of contacting me personally. Those of you who can't please think at me as loud as you can, if I sense the demand is great enough I may add a comments section. Farewell until the stars once again align for the next book club.

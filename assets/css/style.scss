@@ -115,6 +115,22 @@ h3{
 
 p{
     margin: 0;
+    margin-bottom: 10px;
+}
+
+blockquote{
+    background-color: #DDDDE9;
+    border-left: 3px solid gray;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+
+    & p{
+        margin: 0;
+    }
 }
 
 section{
