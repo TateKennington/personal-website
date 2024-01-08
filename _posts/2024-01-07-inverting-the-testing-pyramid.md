@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Inverting the testing pyramid
+title: Inverting the Testing Pyramid
 description: ""
 thumbnail: ""
 ---
